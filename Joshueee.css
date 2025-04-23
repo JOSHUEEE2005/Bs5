@@ -1,0 +1,539 @@
+/* Resets default margins and ensures full-width page */
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal overflow */
+    position: relative; /* Allows absolute positioning of child elements */
+    padding-top: 80px; /* Adds space for fixed navbar */
+}
+
+/* Styles background video to cover entire screen */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video scales properly */
+    z-index: -2; /* Places video behind all content */
+}
+
+/* Adds semi-transparent dark overlay over video */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(53, 53, 53, 0.795), rgba(31, 30, 30, 0.534));
+    z-index: -1; /* Places overlay above video but below content */
+}
+
+/* Styles hero section with transparent background */
+#hero {
+    background: transparent; /* Shows video and overlay */
+    color: white; /* White text for contrast */
+}
+
+/* Aligns hero content to the left with padding */
+#hero .container {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 15%; /* Shifts content right on desktop */
+}
+
+/* Styles hero heading */
+#hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Enhances readability */
+    text-align: left;
+}
+
+/* Styles hero paragraph */
+#hero p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+/* Styles navbar with black background */
+.navbar.bg-black {
+    background-color: #000000 !important;
+    padding: 1.5rem 1rem;
+}
+
+/* Ensures navbar stays above other content */
+.navbar.fixed-top {
+    z-index: 1000;
+}
+
+/* Styles navbar brand logo */
+.navbar-brand {
+    font-size: 2rem !important;
+    font-weight: 700;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for navbar brand */
+.navbar-brand:hover {
+    color: #cccccc !important; /* Light gray on hover */
+}
+
+/* Styles navbar menu items */
+.navbar-nav {
+    gap: 3rem; /* Spaces out links */
+    margin-left: auto; /* Aligns menu to the right */
+}
+
+/* Styles individual nav links */
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-size: 1.5rem !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for nav links */
+.navbar-nav .nav-link:hover {
+    color: #cccccc !important;
+}
+
+/* Styles active nav link */
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+/* Styles mobile menu toggle button */
+.navbar-toggler {
+    border: 2px solid white;
+    padding: 10px;
+}
+
+/* Customizes toggle button icon */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/* Hover effect for toggle button */
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Styles About section with black semi-transparent background */
+#about {
+    text-align: left;
+    padding: 2rem 0; /* Vertical padding for spacing */
+}
+
+/* Styles container for About section layout */
+#about .container {
+    max-width: 100%;
+    padding: 6rem 15px; /* Generous padding for desktop */
+}
+
+/* Styles container for About Me content with video background */
+#about .about-me-container {
+    border-radius: 15px; /* Rounded corners */
+    position: relative; /* Allows positioning of video */
+    overflow: hidden; /* Ensures video stays within bounds */
+}
+
+/* Styles video background for About Me container */
+#about .about-me-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills container */
+    z-index: -1; /* Places video behind content */
+}
+
+/* Adds semi-transparent overlay for About Me video */
+#about .about-me-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+    z-index: 0; /* Places overlay above video but below content */
+}
+
+/* Styles content wrapper to ensure text is in front */
+#about .about-me-content {
+    position: relative; /* Ensures content is above video */
+    z-index: 1; /* Places content in front */
+}
+
+/* Styles About section title */
+#about h2 {
+    text-align: center; /* Centers title */
+    font-size: 4rem;
+    width: 100%;
+    margin: 0 0 2rem;
+    padding-left: 15px; /* Slight left alignment */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Enhances readability */
+}
+
+/* Styles row for image and text layout */
+#about .row {
+    
+    display: flex;
+    align-items: flex-start; /* Aligns content at top */
+    margin: 0;
+}
+
+/* Styles image column */
+#about .col-md-4 {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-right: 15px; /* Space between image and text */
+}
+
+/* Styles text column */
+#about .col-md-8 {
+    
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding-left: 15px;
+}
+
+/* Styles About section image */
+#about img {
+    width: 90%;
+    height: auto;
+    display: block; /* Centers image */
+}
+
+/* Styles About section paragraph and quote */
+#about p,
+#about .blockquote {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Enhances readability */
+}
+
+/* Styles skills list */
+#about ul {
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Enhances readability */
+}
+
+/* Styles Games section title */
+.gaming h2 {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fae5d3;
+    margin-bottom: 10px;
+}
+
+.gaming {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2rem 0;
+}
+
+/* Styles Games section description */
+.gaming p {
+    font-size: 16px;
+    color: #fae5d3;
+    margin-bottom: 10px;
+}
+
+/* Centers game cards */
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 150px; /* Space for scrolling */
+}
+
+/* Styles container for game cards */
+.games2 {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+/* Styles individual game card */
+.wrap {
+    width: 80px; /* Collapsed width */
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 32px;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    position: relative; /* Allows video positioning */
+    transition: 0.6s cubic-bezier(0.28,-0.03,0,0.99); /* Smooth expansion */
+    box-shadow: 0px 10px 30px -5px #e3e5ea;
+}
+
+.game-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills card */
+    z-index: -1; /* Places video behind content */
+    border: 2px solid red; /* Temporary debugging border */
+}
+
+/* Styles game card content */
+.wrap > .r3 {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Styles card number icon */
+.wrap > .r3 > .icon2 {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+/* Styles game description */
+.wrap > .r3 > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0; /* Hidden when collapsed */
+    transform: translateY(30px);
+    transition-delay: 0.3s;
+    transition: all 0.3s ease;
+}
+
+/* Styles description text */
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+/* Styles game title */
+.description h4 {
+    text-transform: uppercase;
+}
+
+/* Hides radio inputs */
+input {
+    display: none;
+}
+
+/* Expands selected game card */
+input:checked + label {
+    width: 600px; /* Expanded width */
+}
+
+/* Shows description for selected card */
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Styles game info text */
+.game-info {
+    margin-top: 100px;
+    margin-left: 75px;
+}
+
+/* Styles game info heading */
+.game-info h3 {
+    width: 260px;
+    height: auto;
+    color: white;
+}
+
+/* Styles project card images */
+#projects .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Ensures contact form fits container */
+#contact form {
+    max-width: 100%;
+}
+
+/* Styles contact form inputs */
+#contact .form-control {
+    font-size: 1rem;
+}
+
+/* Styles footer text */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Updated background color for About Me content container */
+#about .bg-white {
+    background-color: #fbeee6 !important; /* Soft peach background */
+}
+
+/* Mobile styles for screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Less space for navbar */
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem !important;
+    }
+
+    .navbar-nav {
+        gap: 1rem !important;
+        margin-left: 0 !important;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem !important;
+        padding: 0.5rem 0;
+    }
+
+    #hero .container {
+        padding: 0 !important;
+        margin: 0 auto;
+        text-align: center !important;
+        max-width: 90%;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+        transform: none;
+        text-align: center;
+    }
+
+    #hero p {
+        font-size: 1rem;
+        transform: none;
+        text-align: center;
+    }
+
+    #hero .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        transform: none;
+    }
+
+    #about {
+        padding: 2rem 0;
+    }
+
+    #about .container {
+        padding: 2rem 15px; /* Reduced padding */
+    }
+
+    #about h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #about .row {
+        flex-direction: column; /* Stacks content vertically */
+    }
+
+    #about .col-md-4,
+    #about .col-md-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    #about img {
+        max-width: 80%;
+        margin: 0 auto 1.5rem;
+        display: block;
+    }
+
+    #about p,
+    #about ul {
+        font-size: 0.9rem;
+    }
+
+    #about .blockquote p {
+        font-size: 1rem;
+    }
+
+    #projects {
+        padding: 2rem 0;
+    }
+
+    #projects .card {
+        margin-bottom: 1.5rem;
+    }
+
+    #projects .card-img-top {
+        height: 150px;
+    }
+
+    #projects .card-title {
+        font-size: 1.2rem;
+    }
+
+    #projects .card-text {
+        font-size: 0.9rem;
+    }
+
+    #contact {
+        padding: 2rem 0;
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+
+    #contact .form-label,
+    #contact .form-control,
+    #contact .btn {
+        font-size: 0.9rem;
+    }
+
+    .d-flex.gap-4 i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Styles for very small screens (below 576px) */
+@media (max-width: 576px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    #about img {
+        max-width: 100%;
+    }
+
+    #projects .card-img-top {
+        height: 120px;
+    }
+}
