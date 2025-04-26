@@ -2,23 +2,23 @@
 body {
     margin: 0;
     width: 100%;
-    overflow-x: hidden; /* Prevents horizontal overflow */
-    position: relative; /* Allows absolute positioning of child elements */
-    padding-top: 80px; /* Adds space for fixed navbar */
+    overflow-x: hidden; /* Prevents horizontal scrollbars */
+    position: relative; /* Allows absolute positioning of video */
+    padding-top: 80px; /* Space for fixed navbar */
 }
 
-/* Styles background video to cover entire screen */
+/* Styles background video to cover entire page */
 #bg-video {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures video scales properly */
+    object-fit: cover; /* Scales video to fill screen */
     z-index: -2; /* Places video behind all content */
 }
 
-/* Adds semi-transparent dark overlay over video */
+/* Adds semi-transparent overlay over background video */
 body::after {
     content: '';
     position: fixed;
@@ -30,50 +30,50 @@ body::after {
     z-index: -1; /* Places overlay above video but below content */
 }
 
-/* Styles hero section with transparent background */
+/* Styles hero section to show background video */
 #hero {
-    background: transparent; /* Shows video and overlay */
+    background: transparent; /* Allows video and overlay to show through */
     color: white; /* White text for contrast */
 }
 
-/* Aligns hero content to the left with padding */
+/* Aligns hero content with left padding */
 #hero .container {
     text-align: left;
     margin-left: 0;
-    padding-left: 15%; /* Shifts content right on desktop */
+    padding-left: 15%; /* Shifts content right */
 }
 
 /* Styles hero heading */
 #hero h1 {
     font-size: 4rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Enhances readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Improves readability */
     text-align: left;
 }
 
 /* Styles hero paragraph */
 #hero p {
     font-size: 1.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Improves readability */
     text-align: left;
 }
 
 /* Styles navbar with black background */
 .navbar.bg-black {
     background-color: #000000 !important;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1rem; /* Adds padding for spacing */
 }
 
 /* Ensures navbar stays above other content */
 .navbar.fixed-top {
-    z-index: 1000;
+    z-index: 1000; /* High z-index for visibility */
 }
 
 /* Styles navbar brand logo */
 .navbar-brand {
     font-size: 2rem !important;
-    font-weight: 700;
-    transition: color 0.3s ease; /* Smooth hover effect */
+    font-weight: 700; /* Bold logo */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 /* Hover effect for navbar brand */
@@ -92,23 +92,23 @@ body::after {
     color: #ffffff !important;
     font-size: 1.5rem !important;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 /* Hover effect for nav links */
 .navbar-nav .nav-link:hover {
-    color: #cccccc !important;
+    color: #cccccc !important; /* Light gray on hover */
 }
 
 /* Styles active nav link */
 .navbar-nav .nav-link.active {
     color: #ffffff !important;
-    font-weight: 700;
+    font-weight: 700; /* Bold for active link */
 }
 
 /* Styles mobile menu toggle button */
 .navbar-toggler {
-    border: 2px solid white;
+    border: 2px solid white; /* White border */
     padding: 10px;
 }
 
@@ -121,85 +121,39 @@ body::after {
 
 /* Hover effect for toggle button */
 .navbar-toggler:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
 }
 
-/* Styles About section with black semi-transparent background */
+/* Styles About section with semi-transparent background */
 #about {
     text-align: left;
     padding: 2rem 0; /* Vertical padding for spacing */
 }
 
-/* Styles container for About section layout */
+/* Styles container for About section content */
 #about .container {
     max-width: 100%;
     padding: 6rem 15px; /* Generous padding for desktop */
 }
 
-/* Styles container for About Me content with video background */
-#about .about-me-container {
-    border-radius: 15px; /* Rounded corners */
-    position: relative; /* Allows positioning of video */
-    overflow: hidden; /* Ensures video stays within bounds */
-}
-
-/* Styles video background for About Me container */
-#about .about-me-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures video fills container */
-    z-index: -1; /* Places video behind content */
-}
-
-/* Adds semi-transparent overlay for About Me video */
-#about .about-me-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
-    z-index: 0; /* Places overlay above video but below content */
-}
-
-/* Styles content wrapper to ensure text is in front */
-#about .about-me-content {
-    position: relative; /* Ensures content is above video */
-    z-index: 1; /* Places content in front */
-}
-
 /* Styles About section title */
 #about h2 {
-    text-align: center; /* Centers title */
+    text-align: center;
     font-size: 4rem;
     width: 100%;
     margin: 0 0 2rem;
-    padding-left: 15px; /* Slight left alignment */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Enhances readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Improves readability */
 }
 
-/* Styles row for image and text layout */
-#about .row {
-    
-    display: flex;
-    align-items: flex-start; /* Aligns content at top */
-    margin: 0;
-}
-
-/* Styles image column */
+/* Styles About section image column */
 #about .col-md-4 {
     flex: 0 0 40%;
     max-width: 40%;
     padding-right: 15px; /* Space between image and text */
 }
 
-/* Styles text column */
+/* Styles About section text column */
 #about .col-md-8 {
-    
     flex: 0 0 60%;
     max-width: 60%;
     padding-left: 15px;
@@ -217,57 +171,176 @@ body::after {
 #about .blockquote {
     font-size: 2.3rem;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Enhances readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Improves readability */
 }
 
 /* Styles skills list */
 #about ul {
     font-size: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Enhances readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Improves readability */
 }
 
-/* para naman toh sa glowglow */
+/* Styles Team section title */
+#team h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #ffffff; /* White for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Improves readability */
+}
 
+/* Styles container for flip cards */
+.flip-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid with minimum 350px columns */
+    gap: 35px; /* Increased gap for larger cards */
+    max-width: 1200px; /* Limits container width */
+    padding: 20px;
+    margin: 0 auto; /* Centers container horizontally */
+    justify-content: center; /* Centers grid items */
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 900px) {
+    .flip-card-container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on wide screens */
+    }
+}
+
+/* Styles individual flip card */
+.flip-card {
+    width: 350px; /* Increased width for larger cards */
+    height: 438px; /* Increased height for larger cards */
+    perspective: 1000px; /* Creates 3D flip effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+}
+
+/* Styles inner card for flip animation */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease; /* Smooth flip animation */
+    transform-style: preserve-3d; /* Enables 3D transform */
+}
+
+/* Flips card on hover */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Rotates card 180 degrees */
+    box-shadow: 0 0 20px rgba(223, 21, 116, 0.7); /* Pink glow on hover */
+}
+
+/* Styles front and back of flip card */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides back face when flipped */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevents content overflow */
+}
+
+/* Styles front of flip card */
+.flip-card-front {
+    background: #1a1a1a; /* Dark background for image */
+}
+
+/* Styles image on front of flip card */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills card */
+}
+
+/* Styles back of flip card */
+.flip-card-back {
+    background: #222; /* Slightly lighter dark background */
+    color: #fff; /* White text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 35px; /* Increased padding for larger cards */
+    transform: rotateY(180deg); /* Rotates back face */
+}
+
+/* Styles heading on back of flip card */
+.flip-card-back h3 {
+    font-size: 28px; /* Increased for larger cards */
+    margin: 0 0 15px; /* Adjusted spacing */
+}
+
+/* Styles paragraph on back of flip card */
+.flip-card-back p {
+    font-size: 20px; /* Increased for larger cards */
+    color: #ccc; /* Light gray for contrast */
+    margin: 0;
+}
+
+/* Styles contact link on back of flip card */
+.flip-card-back a {
+    margin-top: 15px; /* Adjusted spacing */
+    padding: 12px 24px; /* Larger padding for larger cards */
+    background: #ff007a; /* Pink background */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px; /* Consistent with previous size */
+    transition: background 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for contact link */
+.flip-card-back a:hover {
+    background: #3700b3; /* Dark purple on hover */
+}
+
+/* Styles glowing card container */
 .card-container {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Space between cards */
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Centers cards */
     padding: 20px;
 }
 
+/* Styles individual glowing card */
 .glow-card {
     position: relative;
     width: 250px;
     padding: 20px;
-    background: #1a1a1a;
+    background: #1a1a1a; /* Dark background */
     border-radius: 10px;
     text-align: center;
-    color: #ffffff;
-    transition: all 0.4s ease;
-    border: 2px solid transparent;
+    color: #ffffff; /* White text */
+    transition: all 0.4s ease; /* Smooth hover effects */
+    border: 2px solid transparent; /* Transparent border */
 }
 
+/* Hover effect for glowing card */
 .glow-card:hover {
-    transform: translateY(-10px);
-    border: 2px solid #ff007a;
-    box-shadow: 0 0 20px #ff007a, 0 0 40px #ff007a, 0 0 60px rgba(255, 0, 122, 0.5);
+    transform: translateY(-10px); /* Lifts card */
+    border: 2px solid #ff007a; /* Pink border */
+    box-shadow: 0 0 20px #ff007a, 0 0 40px #ff007a, 0 0 60px rgba(255, 0, 122, 0.5); /* Pink glow */
 }
 
+/* Styles heading in glowing card */
 .glow-card h2 {
     margin: 0 0 10px;
     font-size: 1.6em;
-    color: #ff007a;
-    text-shadow: 0 0 5px #ff007a;
+    color: #ff007a; /* Pink text */
+    text-shadow: 0 0 5px #ff007a; /* Pink text glow */
 }
 
+/* Styles paragraph in glowing card */
 .glow-card p {
     margin: 0;
     font-size: 0.9em;
     line-height: 1.5;
-    color: #cccccc;
+    color: #cccccc; /* Light gray text */
 }
 
+/* Adds glowing background effect for hover */
 .glow-card::before {
     content: '';
     position: absolute;
@@ -275,39 +348,37 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ff007a;
-    opacity: 0;
+    background: #ff007a; /* Pink background */
+    opacity: 0; /* Hidden by default */
     border-radius: 10px;
-    transition: opacity 0.4s ease;
-    z-index: -1;
+    transition: opacity 0.4s ease; /* Smooth fade-in */
+    z-index: -1; /* Behind content */
 }
 
+/* Shows glowing background on hover */
 .glow-card:hover::before {
-    opacity: 0.1;
+    opacity: 0.1; /* Slight pink tint */
 }
 
-/* end glow glow */
+/* Styles gaming section */
+.gaming {
+    background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
+    padding: 2rem 0; /* Vertical padding */
+}
 
-
-
-/* Styles Games section title */
+/* Styles gaming section title */
 .gaming h2 {
     text-transform: uppercase;
     font-size: 50px;
     font-weight: 600;
-    color: #fae5d3;
+    color: #fae5d3; /* Light peach color */
     margin-bottom: 10px;
 }
 
-.gaming {
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 2rem 0;
-}
-
-/* Styles Games section description */
+/* Styles gaming section description */
 .gaming p {
     font-size: 16px;
-    color: #fae5d3;
+    color: #fae5d3; /* Light peach color */
     margin-bottom: 10px;
 }
 
@@ -320,12 +391,12 @@ body::after {
     padding-bottom: 150px; /* Space for scrolling */
 }
 
-/* Styles container for game cards */
+/* Styles container for interactive game cards */
 .games2 {
     height: 400px;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: start;
+    justify-content: start; /* Aligns cards to the left */
 }
 
 /* Styles individual game card */
@@ -337,20 +408,20 @@ body::after {
     margin: 0 10px;
     display: flex;
     align-items: flex-end;
-    position: relative; /* Allows video positioning */
+    position: relative; /* For video positioning */
     transition: 0.6s cubic-bezier(0.28,-0.03,0,0.99); /* Smooth expansion */
-    box-shadow: 0px 10px 30px -5px #e3e5ea;
+    box-shadow: 0px 10px 30px -5px #e3e5ea; /* Subtle shadow */
 }
 
+/* Styles video in game card */
 .game-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures video fills card */
-    z-index: -1; /* Places video behind content */
-    border: 2px solid red; /* Temporary debugging border */
+    object-fit: cover; /* Fills card */
+    z-index: -1; /* Behind content */
 }
 
 /* Styles game card content */
@@ -362,7 +433,7 @@ body::after {
 
 /* Styles card number icon */
 .wrap > .r3 > .icon2 {
-    background: #223;
+    background: #223; /* Dark background */
     color: white;
     border-radius: 50%;
     width: 120px;
@@ -384,12 +455,12 @@ body::after {
     opacity: 0; /* Hidden when collapsed */
     transform: translateY(30px);
     transition-delay: 0.3s;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Smooth reveal */
 }
 
 /* Styles description text */
 .description p {
-    color: #b0b0ba;
+    color: #b0b0ba; /* Light gray */
     padding-top: 5px;
 }
 
@@ -414,23 +485,10 @@ input:checked + label .description {
     transform: translateY(0) !important;
 }
 
-/* Styles game info text */
-.game-info {
-    margin-top: 100px;
-    margin-left: 75px;
-}
-
-/* Styles game info heading */
-.game-info h3 {
-    width: 260px;
-    height: auto;
-    color: white;
-}
-
 /* Styles project card images */
 #projects .card-img-top {
     height: 200px;
-    object-fit: cover;
+    object-fit: cover; /* Ensures image fills card */
 }
 
 /* Ensures contact form fits container */
@@ -449,25 +507,29 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Updated background color for About Me content container */
+/* Styles About Me content container background */
 #about .bg-white {
     background-color: #fbeee6 !important; /* Soft peach background */
 }
 
 /* Mobile styles for screens smaller than 768px */
 @media (max-width: 768px) {
+    /* Adjusts body padding for smaller navbar */
     body {
-        padding-top: 60px; /* Less space for navbar */
+        padding-top: 60px;
     }
 
+    /* Reduces navbar padding */
     .navbar {
         padding: 1rem;
     }
 
+    /* Smaller navbar brand */
     .navbar-brand {
         font-size: 1.5rem !important;
     }
 
+    /* Adjusts navbar menu spacing */
     .navbar-nav {
         gap: 1rem !important;
         margin-left: 0 !important;
@@ -475,11 +537,13 @@ footer p {
         padding: 1rem 0;
     }
 
+    /* Smaller nav links */
     .navbar-nav .nav-link {
         font-size: 1.2rem !important;
         padding: 0.5rem 0;
     }
 
+    /* Centers hero content */
     #hero .container {
         padding: 0 !important;
         margin: 0 auto;
@@ -487,41 +551,46 @@ footer p {
         max-width: 90%;
     }
 
+    /* Smaller hero heading */
     #hero h1 {
         font-size: 2.5rem;
-        transform: none;
         text-align: center;
     }
 
+    /* Smaller hero paragraph */
     #hero p {
         font-size: 1rem;
-        transform: none;
         text-align: center;
     }
 
+    /* Smaller hero button */
     #hero .btn {
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
-        transform: none;
     }
 
+    /* Adjusts About section padding */
     #about {
         padding: 2rem 0;
     }
 
+    /* Reduces About section container padding */
     #about .container {
-        padding: 2rem 15px; /* Reduced padding */
+        padding: 2rem 15px;
     }
 
+    /* Smaller About section title */
     #about h2 {
         font-size: 2rem;
         text-align: center;
     }
 
+    /* Stacks About section content vertically */
     #about .row {
-        flex-direction: column; /* Stacks content vertically */
+        flex-direction: column;
     }
 
+    /* Full-width columns on mobile */
     #about .col-md-4,
     #about .col-md-8 {
         flex: 0 0 100%;
@@ -529,55 +598,67 @@ footer p {
         padding: 0 15px;
     }
 
+    /* Centers About section image */
     #about img {
         max-width: 80%;
         margin: 0 auto 1.5rem;
         display: block;
     }
 
+    /* Smaller About section text */
     #about p,
     #about ul {
         font-size: 0.9rem;
     }
 
+    /* Smaller About section quote */
     #about .blockquote p {
         font-size: 1rem;
     }
 
+    /* Adjusts Projects section padding */
     #projects {
         padding: 2rem 0;
     }
 
+    /* Adds spacing between project cards */
     #projects .card {
         margin-bottom: 1.5rem;
     }
 
+    /* Smaller project card images */
     #projects .card-img-top {
         height: 150px;
     }
 
+    /* Smaller project card title */
     #projects .card-title {
         font-size: 1.2rem;
     }
 
+    /* Smaller project card text */
     #projects .card-text {
         font-size: 0.9rem;
     }
 
+    /* Adjusts Contact section padding */
     #contact {
         padding: 2rem 0;
     }
 
+    /* Smaller Contact section title */
     #contact h2 {
         font-size: 1.8rem;
     }
 
+    /* Smaller Contact form elements */
     #contact .form-label,
     #contact .form-control,
     #contact .btn {
         font-size: 0.9rem;
     }
 
+    /* Smaller social media icons */
     .d-flex.gap-4 i {
         font-size: 1.5rem;
     }
@@ -585,18 +666,22 @@ footer p {
 
 /* Styles for very small screens (below 576px) */
 @media (max-width: 576px) {
+    /* Even smaller hero heading */
     #hero h1 {
         font-size: 2rem;
     }
 
+    /* Even smaller hero paragraph */
     #hero p {
         font-size: 0.9rem;
     }
 
+    /* Full-width About section image */
     #about img {
         max-width: 100%;
     }
 
+    /* Smaller project card images */
     #projects .card-img-top {
         height: 120px;
     }
