@@ -2,9 +2,9 @@
 body {
     margin: 0;
     width: 100%;
-    overflow-x: hidden; /* Prevents horizontal scrollbars */
-    position: relative; /* Allows absolute positioning of video */
-    padding-top: 80px; /* Space for fixed navbar */
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 80px;
 }
 
 /* Styles background video to cover entire page */
@@ -14,8 +14,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Scales video to fill screen */
-    z-index: -2; /* Places video behind all content */
+    object-fit: cover;
+    z-index: -2;
 }
 
 /* Adds semi-transparent overlay over background video */
@@ -27,317 +27,349 @@ body::after {
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(53, 53, 53, 0.795), rgba(31, 30, 30, 0.534));
-    z-index: -1; /* Places overlay above video but below content */
+    z-index: -1;
 }
 
 /* Styles hero section to show background video */
 #hero {
-    background: transparent; /* Allows video and overlay to show through */
-    color: white; /* White text for contrast */
+    background: transparent;
+    color: white;
 }
 
 /* Aligns hero content with left padding */
 #hero .container {
     text-align: left;
     margin-left: 0;
-    padding-left: 15%; /* Shifts content right */
+    padding-left: 15%;
 }
 
 /* Styles hero heading */
 #hero h1 {
     font-size: 4rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Improves readability */
-    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Styles hero paragraph */
 #hero p {
     font-size: 1.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Improves readability */
-    text-align: left;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Styles navbar with black background */
 .navbar.bg-black {
-    background-color: #000000 !important;
-    padding: 1.5rem 1rem; /* Adds padding for spacing */
+    background-color: #000;
+    padding: 1.5rem 1rem;
 }
 
 /* Ensures navbar stays above other content */
 .navbar.fixed-top {
-    z-index: 1000; /* High z-index for visibility */
+    z-index: 1000;
 }
 
 /* Styles navbar brand logo */
 .navbar-brand {
-    font-size: 2rem !important;
-    font-weight: 700; /* Bold logo */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-size: 2rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
 /* Hover effect for navbar brand */
 .navbar-brand:hover {
-    color: #cccccc !important; /* Light gray on hover */
+    color: #ccc;
 }
 
 /* Styles navbar menu items */
 .navbar-nav {
-    gap: 3rem; /* Spaces out links */
-    margin-left: auto; /* Aligns menu to the right */
+    gap: 3rem;
+    margin-left: auto;
 }
 
 /* Styles individual nav links */
 .navbar-nav .nav-link {
-    color: #ffffff !important;
-    font-size: 1.5rem !important;
+    color: white;
+    font-size: 1.5rem;
     font-weight: 500;
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: color 0.3s ease;
 }
 
 /* Hover effect for nav links */
 .navbar-nav .nav-link:hover {
-    color: #cccccc !important; /* Light gray on hover */
+    color: #ccc;
 }
 
 /* Styles active nav link */
 .navbar-nav .nav-link.active {
-    color: #ffffff !important;
-    font-weight: 700; /* Bold for active link */
+    font-weight: 700;
 }
 
 /* Styles mobile menu toggle button */
 .navbar-toggler {
-    border: 2px solid white; /* White border */
+    border: 2px solid white;
     padding: 10px;
 }
 
 /* Customizes toggle button icon */
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     width: 1.5em;
     height: 1.5em;
 }
 
 /* Hover effect for toggle button */
 .navbar-toggler:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Styles About section with semi-transparent background */
-#about {
-    text-align: left;
-    padding: 2rem 0; /* Vertical padding for spacing */
-}
-
-/* Styles container for About section content */
-#about .container {
-    max-width: 100%;
-    padding: 6rem 15px; /* Generous padding for desktop */
-}
-
-/* Styles About section title */
-#about h2 {
-    text-align: center;
-    font-size: 4rem;
+/* Wider container for sections */
+.container-wide {
     width: 100%;
-    margin: 0 0 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Improves readability */
-}
-
-/* Styles About section image column */
-#about .col-md-4 {
-    flex: 0 0 40%;
-    max-width: 40%;
-    padding-right: 15px; /* Space between image and text */
-}
-
-/* Styles About section text column */
-#about .col-md-8 {
-    flex: 0 0 60%;
-    max-width: 60%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
     padding-left: 15px;
 }
 
-/* Styles About section image */
-#about img {
-    width: 90%;
-    height: auto;
-    display: block; /* Centers image */
+/* Now Showing Section (#team) */
+#team {
+    padding: 4rem 0;
 }
 
-/* Styles About section paragraph and quote */
-#about p,
-#about .blockquote {
-    font-size: 2.3rem;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Improves readability */
-}
-
-/* Styles skills list */
-#about ul {
-    font-size: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Improves readability */
-}
-
-/* Styles Team section title */
 #team h2 {
     text-align: center;
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    color: #ffffff; /* White for contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Improves readability */
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Styles container for flip cards */
-.flip-card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid with minimum 350px columns */
-    gap: 35px; /* Increased gap for larger cards */
-    max-width: 1200px; /* Limits container width */
-    padding: 20px;
-    margin: 0 auto; /* Centers container horizontally */
-    justify-content: center; /* Centers grid items */
+/* Styles team container */
+.team-container {
+    margin: 0 auto;
+    max-width: 1400px;
 }
 
-/* Responsive layout for larger screens */
-@media (min-width: 900px) {
-    .flip-card-container {
-        grid-template-columns: repeat(3, 1fr); /* Three columns on wide screens */
-    }
+.fade-img {
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    min-height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Styles individual flip card */
-.flip-card {
-    width: 350px; /* Increased width for larger cards */
-    height: 438px; /* Increased height for larger cards */
-    perspective: 1000px; /* Creates 3D flip effect */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+/* Hover effect for image: fade and zoom */
+.fade-img:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
-/* Styles inner card for flip animation */
-.flip-card-inner {
+/* Featured Videos Section (#videos) */
+#videos {
+    padding: 4rem 0;
+}
+
+#videos h2 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles video container */
+.video-container {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* Styles video wrapper for positioning button */
+.video-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
-    transition: transform 0.6s ease; /* Smooth flip animation */
-    transform-style: preserve-3d; /* Enables 3D transform */
 }
 
-/* Flips card on hover */
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg); /* Rotates card 180 degrees */
-    box-shadow: 0 0 20px rgba(223, 21, 116, 0.7); /* Pink glow on hover */
+/* Styles hover-play videos */
+.hover-video {
+    opacity: 1;
+    width: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Styles front and back of flip card */
-.flip-card-front, .flip-card-back {
+.hover-video:hover {
+    border: 2px solid #ff007a;
+    box-shadow: 0 0 10px #ff007a;
+}
+
+/* Styles YouTube button */
+.youtube-btn {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Hides back face when flipped */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Prevents content overflow */
-}
-
-/* Styles front of flip card */
-.flip-card-front {
-    background: #1a1a1a; /* Dark background for image */
-}
-
-/* Styles image on front of flip card */
-.flip-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures image fills card */
-}
-
-/* Styles back of flip card */
-.flip-card-back {
-    background: #222; /* Slightly lighter dark background */
-    color: #fff; /* White text */
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #ff007a;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 35px; /* Increased padding for larger cards */
-    transform: rotateY(180deg); /* Rotates back face */
-}
-
-/* Styles heading on back of flip card */
-.flip-card-back h3 {
-    font-size: 28px; /* Increased for larger cards */
-    margin: 0 0 15px; /* Adjusted spacing */
-}
-
-/* Styles paragraph on back of flip card */
-.flip-card-back p {
-    font-size: 20px; /* Increased for larger cards */
-    color: #ccc; /* Light gray for contrast */
-    margin: 0;
-}
-
-/* Styles contact link on back of flip card */
-.flip-card-back a {
-    margin-top: 15px; /* Adjusted spacing */
-    padding: 12px 24px; /* Larger padding for larger cards */
-    background: #ff007a; /* Pink background */
-    color: #fff; /* White text */
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px; /* Consistent with previous size */
-    transition: background 0.3s ease; /* Smooth color transition */
 }
 
-/* Hover effect for contact link */
-.flip-card-back a:hover {
-    background: #3700b3; /* Dark purple on hover */
+.youtube-btn i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.video-wrapper:hover .youtube-btn {
+    opacity: 1;
+}
+
+.youtube-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff007a;
+}
+
+/* Discover More Section (#reveal) */
+#reveal {
+    background: transparent;
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+#reveal h2 {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+.reveal-box {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 600px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111;
+}
+
+.reveal-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.reveal-box .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.reveal-box:hover .gradient-overlay {
+    opacity: 1.8;
+}
+
+.reveal-box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    line-height: 1.7;
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 0 0 5px #000;
+    color: #fff;
+    max-width: 80%;
+}
+
+.reveal-box:hover p {
+    opacity: 1;
+}
+
+.reveal-box::before {
+    content: 'Hover to Reveal';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2em;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 4;
+    text-shadow: 0 0 5px #000;
+}
+
+.reveal-box:hover::before {
+    opacity: 0;
 }
 
 /* Styles glowing card container */
 .card-container {
     display: flex;
-    gap: 20px; /* Space between cards */
+    gap: 30px;
     flex-wrap: wrap;
-    justify-content: center; /* Centers cards */
-    padding: 20px;
+    justify-content: center;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* Styles individual glowing card */
 .glow-card {
     position: relative;
-    width: 250px;
-    padding: 20px;
-    background: #1a1a1a; /* Dark background */
+    width: 300px;
+    padding: 25px;
+    background: #1a1a1a;
     border-radius: 10px;
     text-align: center;
-    color: #ffffff; /* White text */
-    transition: all 0.4s ease; /* Smooth hover effects */
-    border: 2px solid transparent; /* Transparent border */
+    color: white;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
 }
 
 /* Hover effect for glowing card */
 .glow-card:hover {
-    transform: translateY(-10px); /* Lifts card */
-    border: 2px solid #ff007a; /* Pink border */
-    box-shadow: 0 0 20px #ff007a, 0 0 40px #ff007a, 0 0 60px rgba(255, 0, 122, 0.5); /* Pink glow */
+    transform: translateY(-10px);
+    border: 2px solid #ff007a;
+    box-shadow: 0 0 20px #ff007a, 0 0 40px #ff007a, 0 0 60px rgba(255, 0, 122, 0.5);
 }
 
 /* Styles heading in glowing card */
 .glow-card h2 {
-    margin: 0 0 10px;
-    font-size: 1.6em;
-    color: #ff007a; /* Pink text */
-    text-shadow: 0 0 5px #ff007a; /* Pink text glow */
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #ff007a;
+    text-shadow: 0 0 5px #ff007a;
 }
 
 /* Styles paragraph in glowing card */
 .glow-card p {
-    margin: 0;
-    font-size: 0.9em;
+    font-size: 1.1rem;
     line-height: 1.5;
-    color: #cccccc; /* Light gray text */
+    color: #ccc;
 }
 
 /* Adds glowing background effect for hover */
@@ -348,157 +380,161 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ff007a; /* Pink background */
-    opacity: 0; /* Hidden by default */
+    background: #ff007a;
+    opacity: 0;
     border-radius: 10px;
-    transition: opacity 0.4s ease; /* Smooth fade-in */
-    z-index: -1; /* Behind content */
+    transition: opacity 0.4s ease;
+    z-index: -1;
 }
 
 /* Shows glowing background on hover */
 .glow-card:hover::before {
-    opacity: 0.1; /* Slight pink tint */
+    opacity: 0.1;
 }
 
-/* Styles gaming section */
+/* Styles voice section */
 .gaming {
-    background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
-    padding: 2rem 0; /* Vertical padding */
+    background-color: #000;
+    padding: 4rem 0;
+    position: relative;
 }
 
-/* Styles gaming section title */
+/* Separator design before the voice section */
+.gaming:has(.card-container)::before {
+    content: '';
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ff007a, transparent);
+    box-shadow: 0 0 10px #ff007a;
+    margin: 2rem auto;
+    position: relative;
+    top: 0;
+}
+
+/* Styles voice section title */
 .gaming h2 {
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 4rem;
     font-weight: 600;
-    color: #fae5d3; /* Light peach color */
+    color: #fae5d3;
     margin-bottom: 10px;
 }
 
-/* Styles gaming section description */
+/* Styles voice section description */
 .gaming p {
-    font-size: 16px;
-    color: #fae5d3; /* Light peach color */
+    font-size: 1.5rem;
+    color: #fae5d3;
     margin-bottom: 10px;
 }
 
-/* Centers game cards */
+/* Centers title and text in the voice section */
+.gaming:has(.card-container) h2,
+.gaming:has(.card-container) p {
+    text-align: center;
+}
+
+/* Centers voice cards */
 .wrapper {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 150px; /* Space for scrolling */
+    padding-bottom: 50px;
 }
 
-/* Styles container for interactive game cards */
-.games2 {
-    height: 400px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: start; /* Aligns cards to the left */
+/* Contact Section */
+.contact-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 3rem 0;
+    position: relative;
 }
 
-/* Styles individual game card */
-.wrap {
-    width: 80px; /* Collapsed width */
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 32px;
-    margin: 0 10px;
-    display: flex;
-    align-items: flex-end;
-    position: relative; /* For video positioning */
-    transition: 0.6s cubic-bezier(0.28,-0.03,0,0.99); /* Smooth expansion */
-    box-shadow: 0px 10px 30px -5px #e3e5ea; /* Subtle shadow */
+/* Separator design for contact section */
+.contact-separator {
+    width: 80%;
+    max-width: 800px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ff007a, transparent);
+    box-shadow: 0 0 10px #ff007a;
+    margin: 2rem auto;
 }
 
-/* Styles video in game card */
-.game-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Fills card */
-    z-index: -1; /* Behind content */
-}
-
-/* Styles game card content */
-.wrap > .r3 {
-    color: white;
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-/* Styles card number icon */
-.wrap > .r3 > .icon2 {
-    background: #223; /* Dark background */
-    color: white;
-    border-radius: 50%;
-    width: 120px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-}
-
-/* Styles game description */
-.wrap > .r3 > .description {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    height: 80px;
-    width: 520px;
-    opacity: 0; /* Hidden when collapsed */
-    transform: translateY(30px);
-    transition-delay: 0.3s;
-    transition: all 0.3s ease; /* Smooth reveal */
-}
-
-/* Styles description text */
-.description p {
-    color: #b0b0ba; /* Light gray */
-    padding-top: 5px;
-}
-
-/* Styles game title */
-.description h4 {
+/* Styles contact section title */
+.contact-section h2 {
     text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #fae5d3;
+    text-shadow: 0 0 5px #ff007a;
 }
 
-/* Hides radio inputs */
-input {
-    display: none;
+/* Styles contact card container */
+.contact-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: #1a1a1a;
+    border-radius: 12px;
+    border: 2px solid #ff007a;
+    box-shadow: 0 0 10px #ff007a;
+    transition: all 0.4s ease;
 }
 
-/* Expands selected game card */
-input:checked + label {
-    width: 600px; /* Expanded width */
-}
-
-/* Shows description for selected card */
-input:checked + label .description {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-/* Styles project card images */
-#projects .card-img-top {
-    height: 200px;
-    object-fit: cover; /* Ensures image fills card */
-}
-
-/* Ensures contact form fits container */
-#contact form {
-    max-width: 100%;
+/* Hover effect for contact card */
+.contact-card:hover {
+    box-shadow: 0 0 20px #ff007a, 0 0 40px rgba(255, 0, 122, 0.5);
 }
 
 /* Styles contact form inputs */
-#contact .form-control {
-    font-size: 1rem;
+.contact-input {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect for inputs */
+.contact-input:focus {
+    outline: none;
+    border-color: #ff007a;
+    box-shadow: 0 0 10px #ff007a;
+    background-color: #333;
+}
+
+/* Styles contact form labels */
+.contact-form .form-label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fae5d3;
+}
+
+/* Styles contact form button */
+.contact-btn {
+    background-color: #ff007a;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for button */
+.contact-btn:hover {
+    background-color: #e6006e;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff007a;
+}
+
+/* Ensures contact form fits container */
+.contact-form {
+    max-width: 100%;
 }
 
 /* Styles footer text */
@@ -507,182 +543,417 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Styles About Me content container background */
-#about .bg-white {
-    background-color: #fbeee6 !important; /* Soft peach background */
-}
-
 /* Mobile styles for screens smaller than 768px */
 @media (max-width: 768px) {
-    /* Adjusts body padding for smaller navbar */
     body {
         padding-top: 60px;
     }
 
-    /* Reduces navbar padding */
     .navbar {
         padding: 1rem;
     }
 
-    /* Smaller navbar brand */
     .navbar-brand {
-        font-size: 1.5rem !important;
+        font-size: 1.5rem;
     }
 
-    /* Adjusts navbar menu spacing */
     .navbar-nav {
-        gap: 1rem !important;
-        margin-left: 0 !important;
+        gap: 1rem;
+        margin-left: 0;
         text-align: center;
         padding: 1rem 0;
     }
 
-    /* Smaller nav links */
     .navbar-nav .nav-link {
-        font-size: 1.2rem !important;
+        font-size: 1.2rem;
         padding: 0.5rem 0;
     }
 
-    /* Centers hero content */
     #hero .container {
-        padding: 0 !important;
+        padding: 0;
         margin: 0 auto;
-        text-align: center !important;
+        text-align: center;
         max-width: 90%;
     }
 
-    /* Smaller hero heading */
     #hero h1 {
         font-size: 2.5rem;
-        text-align: center;
     }
 
-    /* Smaller hero paragraph */
     #hero p {
         font-size: 1rem;
-        text-align: center;
     }
 
-    /* Smaller hero button */
     #hero .btn {
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
     }
 
-    /* Adjusts About section padding */
-    #about {
-        padding: 2rem 0;
+    .container-wide {
+        max-width: 90%;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
-    /* Reduces About section container padding */
-    #about .container {
-        padding: 2rem 15px;
-    }
-
-    /* Smaller About section title */
-    #about h2 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    /* Stacks About section content vertically */
-    #about .row {
-        flex-direction: column;
-    }
-
-    /* Full-width columns on mobile */
-    #about .col-md-4,
-    #about .col-md-8 {
-        flex: 0 0 100%;
+    .team-container,
+    .video-container,
+    .reveal-box,
+    .card-container {
         max-width: 100%;
-        padding: 0 15px;
     }
 
-    /* Centers About section image */
-    #about img {
-        max-width: 80%;
-        margin: 0 auto 1.5rem;
-        display: block;
+    .youtube-btn {
+        width: 32px;
+        height: 32px;
+        top: 8px;
+        right: 8px;
     }
 
-    /* Smaller About section text */
-    #about p,
-    #about ul {
-        font-size: 0.9rem;
-    }
-
-    /* Smaller About section quote */
-    #about .blockquote p {
+    .youtube-btn i {
         font-size: 1rem;
     }
 
-    /* Adjusts Projects section padding */
-    #projects {
+    .contact-section {
         padding: 2rem 0;
     }
 
-    /* Adds spacing between project cards */
-    #projects .card {
-        margin-bottom: 1.5rem;
+    .contact-section h2 {
+        font-size: 2.5rem;
     }
 
-    /* Smaller project card images */
-    #projects .card-img-top {
-        height: 150px;
+    .contact-card {
+        max-width: 90%;
+        padding: 2rem;
     }
 
-    /* Smaller project card title */
-    #projects .card-title {
+    .contact-form .form-label {
+        font-size: 1.1rem;
+    }
+
+    .contact-input,
+    .contact-btn {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    .contact-separator {
+        width: 90%;
+        margin: 1.5rem auto;
+    }
+
+    .d-flex.gap-4 i {
+        font-size: 1.5rem;
+    }
+
+    .team-container .row {
+        margin: 0;
+    }
+
+    .fade-img {
+        max-width: 100%;
+        margin-bottom: 15px;
+        min-height: 500px;
+    }
+
+    .video-container .row {
+        margin: 0;
+    }
+
+    .hover-video {
+        max-width: 100%;
+        margin-bottom: 15px;
+        min-height: 300px;
+    }
+
+    .gaming {
+        padding: 3rem 0;
+    }
+
+    .gaming h2 {
+        font-size: 3rem;
+    }
+
+    .gaming p {
         font-size: 1.2rem;
     }
 
-    /* Smaller project card text */
-    #projects .card-text {
+    .card-container {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .glow-card {
+        width: 250px;
+        padding: 20px;
+    }
+
+    .glow-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .glow-card p {
         font-size: 0.9rem;
     }
 
-    /* Adjusts Contact section padding */
-    #contact {
-        padding: 2rem 0;
+    .gaming:has(.card-container)::before {
+        max-width: 90%;
+        margin: 1.5rem auto;
     }
 
-    /* Smaller Contact section title */
-    #contact h2 {
-        font-size: 1.8rem;
+    #reveal {
+        padding: 3rem 0;
     }
 
-    /* Smaller Contact form elements */
-    #contact .form-label,
-    #contact .form-control,
-    #contact .btn {
-        font-size: 0.9rem;
+    .reveal-box {
+        height: 500px;
     }
 
-    /* Smaller social media icons */
-    .d-flex.gap-4 i {
-        font-size: 1.5rem;
+    .reveal-box p {
+        font-size: 1.6rem;
+        max-width: 90%;
+    }
+
+    .reveal-box::before {
+        font-size: 1.6em;
     }
 }
 
 /* Styles for very small screens (below 576px) */
 @media (max-width: 576px) {
-    /* Even smaller hero heading */
     #hero h1 {
         font-size: 2rem;
     }
 
-    /* Even smaller hero paragraph */
     #hero p {
         font-size: 0.9rem;
     }
 
-    /* Full-width About section image */
-    #about img {
-        max-width: 100%;
+    .fade-img {
+        margin-bottom: 10px;
+        min-height: 400px;
     }
 
-    /* Smaller project card images */
-    #projects .card-img-top {
-        height: 120px;
+    .hover-video {
+        margin-bottom: 10px;
+        min-height: 200px;
+    }
+
+    .youtube-btn {
+        width: 28px;
+        height: 28px;
+        top: 6px;
+        right: 6px;
+    }
+
+    .youtube-btn i {
+        font-size: 0.9rem;
+    }
+
+    .reveal-box {
+        height: 400px;
+    }
+
+    .reveal-box p {
+        font-size: 1.4rem;
+    }
+
+    .reveal-box::before {
+        font-size: 1.4em;
+    }
+
+    .gaming {
+        padding: 2rem 0;
+    }
+
+    .gaming h2 {
+        font-size: 2.5rem;
+    }
+
+    .gaming p {
+        font-size: 1rem;
+    }
+
+    .card-container {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .glow-card {
+        width: 220px;
+        padding: 15px;
+    }
+
+    .glow-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .glow-card p {
+        font-size: 0.8rem;
+    }
+
+    .gaming:has(.card-container)::before {
+        max-width: 95%;
+        margin: 1rem auto;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-card {
+        padding: 1.5rem;
+    }
+
+    .contact-form .form-label {
+        font-size: 1rem;
+    }
+
+    .contact-input,
+    .contact-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .contact-separator {
+        width: 95%;
+        margin: 1rem auto;
+    }
+}
+
+/* Responsive adjustments for Now Showing images */
+@media (max-width: 768px) {
+    .fade-img {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .fade-img {
+        min-height: 400px;
+    }
+}
+
+/* Responsive adjustments for videos */
+@media (max-width: 768px) {
+    .hover-video {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hover-video {
+        min-height: 200px;
+    }
+}
+
+/* Waveform Animation Styles */
+.waveform-toggle {
+    display: none;
+}
+
+.waveform-label {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(255, 0, 122, 0.2), rgba(255, 77, 148, 0.2));
+    transition: box-shadow 0.3s ease;
+}
+
+.waveform-label:hover {
+    box-shadow: 0 0 15px #ff007a;
+}
+
+.waveform-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 8px;
+}
+
+.wave-bar {
+    width: 8px;
+    height: 25px;
+    background: #ff007a;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #ff007a;
+    transform-origin: bottom;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.wave-bar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.wave-bar:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.wave-bar:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.wave-bar:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scaleY(0.5);
+        box-shadow: 0 0 5px #ff007a;
+    }
+    50% {
+        transform: scaleY(1.5);
+        box-shadow: 0 0 15px #ff007a;
+    }
+}
+
+.waveform-toggle:checked + .waveform-label .wave-bar {
+    animation: pulse-active 0.8s infinite ease-in-out;
+}
+
+@keyframes pulse-active {
+    0%, 100% {
+        transform: scaleY(0.7);
+        background: #ff4d94;
+        box-shadow: 0 0 20px #ff4d94;
+    }
+    50% {
+        transform: scaleY(2);
+        background: #ff007a;
+        box-shadow: 0 0 30px #ff007a;
+    }
+}
+
+.waveform-audio {
+    display: none;
+}
+
+/* Responsive adjustments for waveform */
+@media (max-width: 768px) {
+    .waveform-label {
+        height: 40px;
+    }
+
+    .wave-bar {
+        width: 6px;
+        height: 20px;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 576px) {
+    .waveform-label {
+        height: 30px;
+    }
+
+    .wave-bar {
+        width: 5px;
+        height: 15px;
+        gap: 5px;
     }
 }

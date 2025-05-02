@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Defines character encoding for proper text rendering -->
     <meta charset="utf-8" />
-    <!-- Ensures responsive design across devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Sets browser tab title -->
     <title>Joshueee's Portfolio</title>
-    <!-- Links custom CSS for flip cards and other styles -->
     <link rel="stylesheet" href="Joshueee.css">
-    <!-- Links Bootstrap Icons for social media icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Links Bootstrap CSS for layout and styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 </head>
 <body>
-    <!-- Background video that covers the entire page -->
     <video autoplay muted loop playsinline id="bg-video">
         <source src="./img/Tinted-Top-Vid.mp4" type="video/mp4">
     </video>
 
-    <!-- Navigation bar fixed at the top -->
     <nav class="navbar navbar-expand-lg bg-black text-white fixed-top">
         <div class="container-fluid">
-            <!-- Brand logo linking to another page -->
             <a class="navbar-brand text-white fs-3" href="kahitAno.html">JOSHUEEE</a>
-            <!-- Toggle button for mobile menu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Collapsible menu items -->
             <div class="collapse navbar-collapse bg-black justify-content-center" id="navbarNav">
                 <ul class="navbar-nav gap-4">
                     <li class="nav-item"><a href="#about" class="nav-link active fs-4 text-white" aria-current="page">About Me</a></li>
@@ -40,57 +29,93 @@
         </div>
     </nav>
 
-    <!-- Hero section with portfolio introduction -->
     <section id="hero" class="vh-100 d-flex align-items-center justify-content-center text-white">
         <div class="container text-center">
-            <!-- Main portfolio heading -->
-            <h1 class="display-3">Joshueee's Portfolio</h1>
-            <!-- Description of roles -->
+            <h1 class="display-3">Joshueee's Archive</h1>
             <p class="lead">Director | Voice Over artist | UI/UX Developer</p>
-            <!-- Button to scroll to About section -->
-            <a href="#about" class="btn btn-danger btn-lg mt-3">Learn More</a>
+            <a href="Drew.html" class="btn btn-danger btn-lg mt-3">Learn More</a>
         </div>
     </section>
 
-    <!-- About section with personal details -->
-    <div id="about" class="container-fluid text-white text-center bg-black bg-opacity-75">
-        <div class="container p-5">
-            <!-- White container for About Me content -->
-            <div class="bg-white text-dark rounded p-5">
-                <!-- Section title -->
-                <h2 class="text-center mb-5">About Me</h2>
-                <!-- Row for image and text layout -->
-                <div class="row align-items-start">
-                    <!-- Column for personal image -->
+    <div id="team" class="container-fluid text-white text-center bg-black py-5">
+        <div class="container-wide">
+            <h2 class="mb-5">Now showing</h2>
+            <div class="team-container">
+                <div class="row g-4">
                     <div class="col-md-4">
-                        <img src="./img/aboutme.jpg" class="rounded-circle img-fluid border border-dark border-5" alt="This is me.">
+                        <img src="./img/Mov1.jpg" alt="Team Member 1" class="fade-img img-fluid rounded">
                     </div>
-                    <!-- Column for description and skills -->
-                    <div class="col-md-8">
-                        <!-- Inspirational quote -->
-                        <blockquote class="blockquote text-center">
-                            <p class="my-4">"software developer in the making "</p>
-                        </blockquote>
-                        <!-- Personal description -->
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias facere esse, ullam quo vel dolore ipsum consectetur ad dolor enim blanditiis optio beatae distinctio, qui sunt! Alias ab doloremque autem tempore! Aut tempora est praesentium fugiat doloremque incidunt distinctio qui doloribus itaque nemo sequi ratione pariatur corporis veniam ab explicabo eligendi optio laudantium beatae sint corrupti unde, neque in! Sunt.</p>
-                        <!-- Skills section title -->
-                        <h5 class="text-start">Skills:</h5>
-                        <!-- Row for two-column skills list -->
-                        <div class="row">
-                            <!-- First column of skills -->
-                            <div class="col-md-6 col-sm-6 text-start">
-                                <ul class="list-unstyled">
-                                    <li>HTML, CSS, JavaScript</li>
-                                    <li>BootStrap, React, Angular</li>
-                                </ul>
-                            </div>
-                            <!-- Second column of skills -->
-                            <div class="col-md-6 col-sm-6 text-start">
-                                <ul class="list-unstyled">
-                                    <li>Node JS, Express, MongoDB</li>
-                                    <li>VersionControl (Git/Github)</li>
-                                </ul>
-                            </div>
+                    <div class="col-md-4">
+                        <img src="./img/Mov2.jpg" alt="Team Member 2" class="fade-img img-fluid rounded">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="./img/Mov3.jpg" alt="Team Member 3" class="fade-img img-fluid rounded">
+                    </div>
+                </div>
+                <div class="row g-4 mt-4">
+                    <div class="col-md-4">
+                        <img src="./img/Mov4.jpg" alt="Team Member 4" class="fade-img img-fluid rounded">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="./img/Mov5.jpg" alt="Team Member 5" class="fade-img img-fluid rounded">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="./img/Mov6.jpg" alt="Team Member 6" class="fade-img img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="videos" class="container-fluid text-white text-center bg-black py-5">
+        <div class="container-wide">
+            <h2 class="mb-5">Featured Videos</h2>
+            <div class="video-container">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="video-wrapper">
+                            <video class="hover-video img-fluid rounded" muted loop controls>
+                                <source src="./img/Rizal_small.mp4" type="video/mp4">
+                                <p>Video not supported or file missing: Rizal.mp4</p>
+                            </video>
+                            <a class="youtube-btn" href="https://youtu.be/Fti1F_Er3PQ" target="_blank">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="video-wrapper">
+                            <video class="hover-video img-fluid rounded" muted loop controls>
+                                <source src="./img/Commercial.mp4" type="video/mp4">
+                                <p>Video not supported or file missing: Commercial.mp4</p>
+                            </video>
+                            <a class="youtube-btn" href="https://www.youtube.com/watch?v=ViFBhDFLaWg" target="_blank">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6">
+                        <div class="video-wrapper">
+                            <video class="hover-video img-fluid rounded" muted loop controls>
+                                <source src="./img/Compet.mp4" type="video/mp4">
+                                <p>Video not supported or file missing: Compet.mp4</p>
+                            </video>
+                            <a class="youtube-btn" href="https://www.youtube.com/watch?v=zdXswIv1dt0" target="_blank">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="video-wrapper">
+                            <video class="hover-video img-fluid rounded" muted loop controls>
+                                <source src="./img/BuwanNgWika.mp4" type="video/mp4">
+                                <p>Video not supported or file missing: Commercial.mp4</p>
+                            </video>
+                            <a class="youtube-btn" href="https://www.youtube.com/watch?v=VIDEO_ID_4" target="_blank">
+                                <i class="bi bi-youtube"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -98,282 +123,163 @@
         </div>
     </div>
 
-    <!-- Team section with flip cards -->
-    <div id="team" class="container-fluid text-white text-center bg-black bg-opacity-75 py-5">
-        <div class="container">
-            <!-- Section title -->
-            <h2 class="mb-5">Meet the Team</h2>
-            <!-- Container for flip cards -->
-            <div class="flip-card-container">
-                <!-- Flip card 1 -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="./img/moodeng.jpg" alt="Team Member 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Anna Lee</h3>
-                            <p>Lead designer with a passion for creative UI.</p>
-                            <a href="#anna">Contact</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Flip card 2 -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="./img/moodeng.jpg" alt="Team Member 2">
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Mark Chen</h3>
-                            <p>Expert in full-stack development.</p>
-                            <a href="#mark">Contact</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Flip card 3 -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="./img/moodeng.jpg" alt="Team Member 3">
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Sara Kim</h3>
-                            <p>SEO specialist driving organic growth.</p>
-                            <a href="#sara">Contact</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Flip card 4 -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="./img/moodeng.jpg" alt="Team Member 4">
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>James Park</h3>
-                            <p>Project manager ensuring timely delivery.</p>
-                            <a href="#james">Contact</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Flip card 5 -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="./img/moodeng.jpg" alt="Team Member 5">
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Lisa Wong</h3>
-                            <p>UX researcher focused on user needs.</p>
-                            <a href="#lisa">Contact</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Flip card 6 -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="./img/moodeng.jpg" alt="Team Member 6">
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Ethan Brown</h3>
-                            <p>Data analyst uncovering key insights.</p>
-                            <a href="#ethan">Contact</a>
-                        </div>
-                    </div>
-                </div>
+    <section id="reveal" class="container-fluid text-white text-center bg-black py-5">
+        <div class="container-wide">
+            <h2 class="mb-5">Discover More</h2>
+            <div class="reveal-box">
+                <img src="./img/GetToKnow.jpg" alt="Portfolio Highlight">
+                <div class="gradient-overlay"></div>
+                <p>
+                    Explore my creative journey through this interactive reveal. 
+                    Hover to uncover insights into my work as a director, voice-over artist, and UI/UX developer!
+                </p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Gaming section with glowing feature cards -->
-    <section class="gaming">
-        <!-- Section title -->
-        <h2>SKILL tho king</h2>
-        <!-- Section description -->
-        <p>Here are some of my favorite games!</p>
+    <section id="voice" class="gaming">
+        <h2>Voice Samples</h2>
+        <p>Here are some of my favorite voice overs</p>
         <div class="wrapper">
-            <!-- Container for glowing cards -->
             <div class="card-container">
-                <!-- Glowing card 1 -->
                 <div class="glow-card">
-                    <h2>Feature One</h2>
-                    <p>Highlight your first feature with this glowing card. Hover to see the effect!</p>
+                    <h2>NU Collab</h2>
+                    <p>Lets bring your script to life</p>
+                    <input type="checkbox" id="waveform-toggle-1" class="waveform-toggle">
+                    <label for="waveform-toggle-1" class="waveform-label">
+                        <div class="waveform-animation">
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                        </div>
+                    </label>
+                    <audio id="audio-feature-1" class="waveform-audio">
+                        <source src="./img/Nu_Commercial.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
-                <!-- Glowing card 2 -->
                 <div class="glow-card">
-                    <h2>Feature Two</h2>
-                    <p>Showcase another awesome feature with a vibrant neon glow.</p>
+                    <h2>TIP Client</h2>
+                    <p>Lets bring your script to life</p>
+                    <input type="checkbox" id="waveform-toggle-2" class="waveform-toggle">
+                    <label for="waveform-toggle-2" class="waveform-label">
+                        <div class="waveform-animation">
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                        </div>
+                    </label>
+                    <audio id="audio-feature-2" class="waveform-audio">
+                        <source src="./img/TIP.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
-                <!-- Glowing card 3 -->
                 <div class="glow-card">
-                    <h2>Feature Three</h2>
-                    <p>Engage users with this stylish card and its hover animation.</p>
+                    <h2>Aud Tape</h2>
+                    <p>Lets bring your script to life</p>
+                    <input type="checkbox" id="waveform-toggle-3" class="waveform-toggle">
+                    <label for="waveform-toggle-3" class="waveform-label">
+                        <div class="waveform-animation">
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                        </div>
+                    </label>
+                    <audio id="audio-feature-3" class="waveform-audio">
+                        <source src="./img/PadreGarcia.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
-                <!-- Glowing card 4 -->
                 <div class="glow-card">
-                    <h2>Feature Four</h2>
-                    <p>Add more content to captivate your audience with this design.</p>
+                    <h2>JLB Collab</h2>
+                    <p>Lets bring your script to life</p>
+                    <input type="checkbox" id="waveform-toggle-4" class="waveform-toggle">
+                    <label for="waveform-toggle-4" class="waveform-label">
+                        <div class="waveform-animation">
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                            <span class="wave-bar"></span>
+                        </div>
+                    </label>
+                    <audio id="audio-feature-4" class="waveform-audio">
+                        <source src="./img/JLB.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gaming section with interactive game cards -->
-    <section class="gaming">
-        <!-- Section title -->
-        <h2>GAMES I ENJOY</h2>
-        <!-- Section description -->
-        <p>Here are some of my favorite games!</p>
-        <div class="wrapper">
-            <div class="games2">
-                <!-- Game 1: Dota 2 -->
-                <input type="radio" name="game" id="c1">
-                <label class="wrap" for="c1">
-                    <div class="r3">
-                        <div class="icon2">1</div>
-                        <div class="description">
-                            <h4>Dota 2</h4>
-                            <p>A multiplayer online battle arena game with deep strategy.</p>
-                        </div>
+    <section id="contact" class="contact-section">
+        <div class="container-wide">
+            <div class="contact-separator"></div>
+            <h2 class="text-center mb-5 text-white">Contact Me</h2>
+            <div class="contact-card">
+                <form class="contact-form">
+                    <div class="mb-4">
+                        <label for="name" class="form-label text-white">Name</label>
+                        <input type="text" class="form-control contact-input" id="name" placeholder="Enter your name" required>
                     </div>
-                    <video class="game-video" autoplay muted loop>
-                        <source src="./img/Tinted-Top-Vid.mp4" type="video/mp4">
-                        <p>Video not supported or file missing: Tinted-Top-Vid.mp4</p>
-                    </video>
-                </label>
-                <!-- Game 2: League of Legends -->
-                <input type="radio" name="game" id="c2">
-                <label class="wrap" for="c2">
-                    <div class="r3">
-                        <div class="icon2">2</div>
-                        <div class="description">
-                            <h4>League of Legends</h4>
-                            <p>A fast-paced MOBA with diverse champions.</p>
-                        </div>
+                    <div class="mb-4">
+                        <label for="email" class="form-label text-white">Email</label>
+                        <input type="text" class="form-control contact-input" id="email" placeholder="Enter your email" required>
                     </div>
-                    <video class="game-video" autoplay muted loop>
-                        <source src="./videos/Top-Vid (2).mp4" type="video/mp4">
-                        <p>Video not supported or file missing: Top-Vid (2).mp4</p>
-                    </video>
-                </label>
-                <!-- Game 3: Genshin Impact -->
-                <input type="radio" name="game" id="c3">
-                <label class="wrap" for="c3">
-                    <div class="r3">
-                        <div class="icon2">3</div>
-                        <div class="description">
-                            <h4>Genshin Impact</h4>
-                            <p>An open-world action RPG with stunning visuals.</p>
-                        </div>
+                    <div class="mb-4">
+                        <label for="message" class="form-label text-white">Message</label>
+                        <textarea class="form-control contact-input" rows="4" id="message" placeholder="Enter your message"></textarea>
                     </div>
-                    <video class="game-video" autoplay muted loop>
-                        <source src="./videos/Top-Vid.mp4" type="video/mp4">
-                        <p>Video not supported or file missing: Top-Vid.mp4</p>
-                    </video>
-                </label>
-                <!-- Game 4: Valorant -->
-                <input type="radio" name="game" id="c4">
-                <label class="wrap" for="c4">
-                    <div class="r3">
-                        <div class="icon2">4</div>
-                        <div class="description">
-                            <h4>Valorant</h4>
-                            <p>A tactical first-person shooter with precise gameplay.</p>
-                        </div>
-                    </div>
-                    <video class="game-video" autoplay muted loop>
-                        <source src="./videos/Top-Vid (2).mp4" type="video/mp4">
-                        <p>Video not supported or file missing: Top-Vid (2).mp4</p>
-                    </video>
-                </label>
+                    <button type="submit" class="btn contact-btn w-100">Send</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Projects section with project cards -->
-    <div id="projects" class="container-fluid bg-dark-subtle">
-        <div class="container p-5">
-            <div class="row">
-                <!-- Project 1 card -->
-                <div class="col-md-4 my-3">
-                    <div class="card h-100 d-flex flex-column">
-                        <img src="./img/moodeng.jpg" alt="" class="card-img-top">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text flex-grow-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt rerum dignissimos ea quas deleniti quisquam consequuntur facere. Consequatur nulla ut voluptate beatae dolorum, nostrum aspernatur!</p>
-                            <a href="" class="btn btn-primary mt-auto">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 card -->
-                <div class="col-md-4 my-3">
-                    <div class="card h-100 d-flex flex-column">
-                        <img src="./img/moodeng.jpg" alt="" class="card-img-top">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text flex-grow-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt rerum dignissimos ea quas deleniti quisquam consequuntur facere. Consequatur nulla ut voluptate beatae dolorum, nostrum aspernatur!</p>
-                            <a href="" class="btn btn-primary mt-auto">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 card -->
-                <div class="col-md-4 my-3">
-                    <div class="card h-100 d-flex flex-column">
-                        <img src="./img/moodeng.jpg" alt="" class="card-img-top">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text flex-grow-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt rerum dignissimos ea quas deleniti quisquam consequuntur facere. Consequatur nulla ut voluptate beatae dolorum, nostrum aspernatur!</p>
-                            <a href="" class="btn btn-primary mt-auto">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact section with form -->
-    <div id="contact" class="container-fluid bg-dark p-5">
-        <div class="container border border-1 rounded-3 p-4">
-            <!-- Section title -->
-            <h2 class="text-center mb-4 text-white">Contact Me</h2>
-            <form>
-                <div class="mb-1">
-                    <label for="name" class="form-label text-white">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                </div>
-                <div class="mb-1">
-                    <label for="email" class="form-label text-white">Email</label>
-                    <input type="text" class="form-control" id="email" placeholder="Enter your email" required>
-                </div>
-                <div class="mb-1">
-                    <label for="message" class="form-label text-white">Message</label>
-                    <textarea class="form-control" rows="3" id="message" placeholder="Enter your message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary mt-4 d-flex justify-content-center w-100">Send</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Social media links section -->
-    <div class="container-fluid bg-light py-3">
+    <div class="container-fluid bg-dark py-3">
         <div class="container text-center">
             <div class="d-flex justify-content-center gap-4">
-                <a href="" class="text-decoration-none text-dark"><i class="bi bi-facebook fs-2"></i></a>
-                <a href="" class="text-decoration-none text-dark"><i class="bi bi-instagram fs-2"></i></a>
-                <a href="" class="text-decoration-none text-dark"><i class="bi bi-twitter fs-2"></i></a>
-                <a href="" class="text-decoration-none text-dark"><i class="bi bi-tiktok fs-2"></i></a>
+                <a href="#" class="text-decoration-none text-white social-icon"><i class="bi bi-facebook fs-2"></i></a>
+                <a href="#" class="text-decoration-none text-white social-icon"><i class="bi bi-instagram fs-2"></i></a>
+                <a href="#" class="text-decoration-none text-white social-icon"><i class="bi bi-twitter fs-2"></i></a>
+                <a href="#" class="text-decoration-none text-white social-icon"><i class="bi bi-tiktok fs-2"></i></a>
             </div>
         </div>
     </div>
 
-    <!-- Footer with copyright -->
     <footer class="bg-dark text-white text-center py-3">
         <p>© 2025 Joshueee, all rights reserved</p>
     </footer>
 
-    <!-- Bootstrap JavaScript for navbar and other interactions -->
+    <script>
+        document.querySelectorAll('.hover-video').forEach(video => {
+            video.addEventListener('mouseover', () => {
+                video.play();
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.waveform-toggle').forEach(toggle => {
+            toggle.addEventListener('change', () => {
+                const audioId = toggle.id.replace('waveform-toggle-', 'audio-feature-');
+                const audio = document.getElementById(audioId);
+                if (toggle.checked) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+            });
+        });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
