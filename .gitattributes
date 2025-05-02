@@ -1,1 +1,3 @@
 img/*.mp4 filter=lfs diff=lfs merge=lfs -text
+!img/T_test.mp4
+!img/BuwanNgWika.mp4
